@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>归并排序算法</title>
+</head>
+<body>
+
+<script>
+function mergeSort(arr){
+    var len = arr.length;
+    if(len < 2){
+        return arr;
+    }
+    var middle = Math.floor(len / 2);
+    var left = arr.slice(0,middle);
+    var right = arr.slice(middle);
+    return merge(mergeSort(left),mergeSort(right));
+}
+function merge(left,right){
+    var result = [];
+    while(left.length>0 && right.length>0){
+        if(left[0] <= right[0]){
+            result.push(left.shift());
+        }else{
+            result.push(right.shift());
+        }
+    }
+    while (left.length){
+        result.push(left.shift());
+    }
+    while (right.length){
+        result.push(right.shift());
+    }
+    return result;
+}
+
+    /*array.silce(start,end)方法，返回的是一个子数组
+    * start规定从何处开始取，如果是负数，如-1,表示从最后一个开始取，-XX以此类推
+    * end规定取到何处，可选参数
+    * */
+var array1 = [34,2,4,3,23,15,23,17,43,9];
+console.log(mergeSort(array1));
+</script>
+</body>
+</html>

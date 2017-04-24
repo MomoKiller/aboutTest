@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Bootstrap Tutorial - A responsive layout tutorial</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <style>
+        body{
+            background-color: #e2e2e2;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Twitter bootstrap tutorial</h1>
+    <nav class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page One</a></li>
+                <li><a href="#">Page Two</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="content" class="row-fluid">
+        <div class="col-md-9">
+            <h2>Main Content Section</h2>
+            <p>这是一段文字描述</p>
+        </div>
+        <div class="col-md-3">
+            <h2>Sidebar</h2>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href='#'>Another Link 1</a></li>
+                <li><a href='#'>Another Link 2</a></li>
+                <li><a href='#'>Another Link 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>

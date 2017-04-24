@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基数排序算法</title>
+    <script src="../resources/jquery-1.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    var counter = [];
+    function radixSort(arr,maxDigit){
+        var mod = 10;
+        var dev = 1;
+        for(var i=0;i<maxDigit;i++,dev *= 10,mod *= 10){
+            for(var j =0;j<arr.length;j++){
+                var bucket = parseInt((arr[j] % mod) / dev);
+                console.log(counter[bucket]);
+                alert(counter[bucket]);
+                if(counter[bucket]==null || counter[bucket] == undefined || counter[bucket] == "undefined"){
+                    counter[bucket] == [];
+                }
+                counter[bucket].push(arr[j]);
+            }
+            var pos = 0;
+            for(var j = 0;j<counter.length;j++){
+                var value = null;
+                if(counter[j]!=null){
+                    /*shift()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值*/
+                    while ((value = counter[j].shift())!=null){
+                        arr[pos++] = value;
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+
+    var array1 = [34,2,4,3,23,15,23,17,43,9];
+    console.log(radixSort(array1,15));
+
+</script>
+</body>
+</html>

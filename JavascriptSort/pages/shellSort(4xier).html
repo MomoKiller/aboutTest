@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>希尔排序算法</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    function shellSort(arr){
+        var len = arr.length,
+                temp,
+                gap = 1;
+        //动态定义间隔
+        while(gap < len/3){
+            gap = gap*3+1;
+        }
+
+        for(gap; gap>0; gap= Math.floor(gap/3)){
+            for(var i = gap;i<len; i++){
+                temp = arr[i];
+                for(var j = i-gap;j > 0 && arr[j]>temp;j-=gap){
+                    arr[j+gap] = arr[j];
+                }
+                arr[j+gap] = temp;
+            }
+        }
+        return arr;
+    }
+
+    var array1 = [9,6,7,34,21,43,17,13,12,21,24,2,1,45,122,56,345,90,11,23,45,12,43];
+    console.log(shellSort(array1));
+</script>
+</body>
+</html>

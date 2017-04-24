@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../resources/jquery-1.6.4/jquery.min.js"></script>
+    <title>冒泡排序算法</title>
+</head>
+<body>
+    <script>
+        function bubbleSort(arr) {
+            var len = arr.length;
+            for (var i = 0; i < len; i++) {
+                for (var j = 0; j < len - 1 - i; j++) {
+                    if (arr[j] > arr[j+1]) {        //相邻元素两两对比
+                        var temp = arr[j+1];        //元素交换
+                        arr[j+1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        /*array1默认为字符，无法比较，应该按照Array2的方式*/
+        var array1 = ['2','34','4','5','6','8'];
+        var array2 = [2,34,4,5,6,8];
+
+        console.log(bubbleSort(array1));
+        console.log(bubbleSort(array2));
+    </script>
+</body>
+</html>

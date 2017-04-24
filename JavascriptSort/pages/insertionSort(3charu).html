@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入排序算法</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function insertionSort(arr){
+            var len = arr.length;
+            var preIndex, current;
+            for(var i = 1;i<len;i++){
+                preIndex = i - 1;
+                current = arr[i];
+                while(preIndex >= 0 && arr[preIndex] > current){
+                    arr[preIndex+1] = arr[preIndex];
+                    preIndex--;
+                }
+                arr[preIndex+1] = current;
+            }
+            return arr;
+        }
+
+        var array1 = [23,12,4,56,3,12,2,5,67];
+        console.log(insertionSort(array1));
+    </script>
+</body>
+</html>

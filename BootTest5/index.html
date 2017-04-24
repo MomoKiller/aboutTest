@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  添加css样式  -->
+    <link href="resources/css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/html5shiv.js"></script>
+    <script src="resources/respond.min.js"></script>
+    <![endif]-->
+    <title>Bootstrap 网站练习</title>
+</head>
+<body>
+<!--  静止在顶部的导航条  -->
+<!--<nav class="navbar navbar-inverse navbar-static-top">-->
+<!--  固定在顶部的导航条  -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <!--  品牌图标  -->
+                <!--<img alt="Brand" src="...">-->
+                Project name
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--  巨幕  -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Bootstrap网站练习</h1>
+        <p>Bootstrap网站练习</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div class="container-fluid">
+    <!--  栅格系统  -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="caption">
+                <h3>Head</h3>
+                <p>栅格布局</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">View more &raquo;</a>
+                    <a href="#" class="btn btn-default" role="button">View more &raquo;</a>
+                </p>
+                <img src="resources/images/cocobean1.jpg" alt="Cocobean">
+            </div>
+            <!--  带了边框的样式  -->
+            <!--<div class="thumbnail">
+            </div>-->
+        </div>
+        <div class="col-md-4">
+            <div class="caption">
+                <h3>Head</h3>
+                <p>栅格布局</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">View more &raquo;</a>
+                    <a href="#" class="btn btn-default" role="button">View more &raquo;</a>
+                </p>
+                <img src="resources/images/cocobean2.jpg" alt="Cocobean">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="caption">
+                <h3>Head</h3>
+                <p>栅格布局</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">View more &raquo;</a>
+                    <a href="#" class="btn btn-default" role="button">View more &raquo;</a>
+                </p>
+                <img src="resources/images/cocobean3.jpg" alt="Cocobean">
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--  引用  -->
+<blockquote class="blockquote-reverse">
+    <p>我们的可可豆成色特别好</p>
+    <footer>这是我自己说的 <cite title="Source Title">好尴尬 .0_0.</cite></footer>
+</blockquote>
+<!--  添加页脚  -->
+<!--<nav aria-label="...">
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</nav>-->
+<!--  另一种页脚  -->
+<nav aria-label="...">
+    <ul class="pager">
+        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+        <li class="next"><a href="#">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+<hr>
+<p class="text-center">&copy;<abbr title="Bootstrap web">Boot</abbr> test</p>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>

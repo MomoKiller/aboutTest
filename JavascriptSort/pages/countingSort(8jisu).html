@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计数排序算法</title>
+</head>
+<body>
+
+<script>
+    function countingSort(arr, maxValue){
+        var bucket = new Array(maxValue+1);
+        var sortedIndex = 0;
+        var arrLen = arr.length;
+        var bucketLen = maxValue +1;
+        for(var i =0;i<arrLen;i++){
+            if(!bucket[arr[i]]){
+                bucket[arr[i]] = 0;
+            }
+            bucket[arr[i]]++;
+        }
+        for(var j=0;j<bucketLen;j++){
+            while (bucket[j]>0){
+                arr[sortedIndex++] = j;
+                bucket[j]--;
+            }
+        }
+        return arr;
+    }
+
+    var array1 = [34,2,4,3,23,15,23,17,43,9];
+    console.log(countingSort(array1,100));
+</script>
+</body>
+</html>

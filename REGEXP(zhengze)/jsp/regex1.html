@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式测试</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    function testRegex(){
+        //方法一、通过构造函数
+        var re = new RegExp("\\?(\\w{1,}=\\w{1,}&){1,}\\w{1,}=\\w{1,}");
+        //方法二、双斜杠的方式定义
+        var re2 = /\?(\w{1,}=\w{1,}&){1,}\w{1,}=\w{1,}/;
+        //使用构造函数的双斜杠方法
+        var re3 = new RegExp(/^\?(\w{1,}=\w{1,}&){1,}\w{1,}=\w{1,}/);
+
+        /*转义字符\*/
+
+        var aText = "index.aspx?test=1&ww=2";
+        //正则表达式 自带的test() 测试方法
+        var result = re.test(aText);
+        if(result){
+            alert("ok");
+        }else{
+            alert("err");
+        }
+    }
+    testRegex();
+</script>
+</body>
+</html>

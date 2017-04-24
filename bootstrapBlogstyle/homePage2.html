@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>集团客户实时监控</title>
+
+    <style>
+        /*整体样式*/
+        body{
+            overflow: hidden;
+            margin: 0px;
+            /*设置最小宽高，大小不随最大化最小化改变*/
+            //min-width: 1200px;
+            //min-height: 720px;
+        }
+        /*容器样式*/
+        .container{
+            background-color: darkslateblue;
+            border-radius: 4px;
+            padding: 10px;
+            border: #9ebfff 20px;
+        }
+        /*南北部Panel样式*/
+        .northPanel{
+            border-radius:4px;
+            background-color: #285e8e;
+        }
+        .southPanel{
+            margin-top: 10px;
+            border-radius: 4px;
+            background-color: #285e8e;
+        }
+        /*北部Panel的样式*/
+        .northLeftPanel{
+            float: left;
+            width: 30%;
+            //background-color: #adadad;
+            margin-top: 10px;
+        }
+        .northCenterPanel{
+            float: left;
+            width: 40%;
+            margin-right: -60%;
+            //background-color: #2aabd2;
+            margin-top: 10px;
+        }
+        .northRightPanel{
+            float: right;
+            width: 30%;
+            //background-color: #adadad;
+            margin-top: 10px;
+        }
+        /*南部Panel的样式*/
+        .southLeftPanel{
+            float:left;
+            width:25%;
+            //background-color: #adadad;
+            margin-top: 10px;
+        }
+        .southCenterPanel{
+            float: left;
+            width: 75%;
+            //background-color: #2aabd2;
+            margin-top: 10px;
+        }
+        /*北部Panel中具体panel的样式*/
+        .northLeftPanel .panel{
+            margin: 0px 5px 0px 10px;
+            background-color: #269abc;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .northCenterPanel .panel{
+            margin: 0px 5px;
+            background-color: #269abc;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .northRightPanel .panel{
+            margin: 0px 10px 0px 5px;
+            background-color: #269abc;
+            height: 100%;
+            border-radius: 4px;
+        }
+        /*南部Panel中具体panel的样式*/
+        .southLeftPanel .panel{
+            margin: 0px 5px 0px 10px;
+            background-color: #269abc;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .southCenterPanel .panel{
+            margin: 0px 10px 0px 5px;
+            background-color: #269abc;
+            height: 100%;
+            border-radius: 4px;
+        }
+        /*h3Panel 的样式调整*/
+        .northPanel .h3Panel{
+            float: left;
+            width: 100%;
+            height: 40px;
+            //background-color: #adadad;
+            //margin-top: 10px;
+            /*字体样式*/
+            color: #ebebeb;
+            text-align: center;
+        }
+        /*控制图片显示样式*/
+        .panel img{
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="northPanel">
+        <div class="h3Panel">
+            <h3><span>集团客户实时监控</span></h3>
+        </div>
+        <!--  三个Panel  -->
+        <div class="northLeftPanel">
+            <div class="panel">
+                <img src="images/blue/lan1.png" alt="...">
+            </div>
+        </div>
+        <div class="northCenterPanel">
+            <div class="panel">
+                <img src="images/blue/lan2.jpg" alt="...">
+            </div>
+        </div>
+        <div class="northRightPanel">
+            <div class="panel">
+                <img src="images/blue/lan3.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="southPanel">
+        <div class="southLeftPanel">
+            <div class="panel">
+                <img src="images/blue/lan4.jpg" alt="...">
+            </div>
+        </div>
+        <div class="southCenterPanel">
+            <div class="panel">
+                <img src="images/blue/lan5.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="jquery/jquery.min.js"></script>
+<script src="test1Resources/js/homePage2.js"></script>
+
+</body>
+</html>

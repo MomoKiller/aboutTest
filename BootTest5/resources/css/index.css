@@ -1,0 +1,16 @@
+/*调整栅格布局高度*/
+div .caption{
+    height: 300px;
+}
+/*去除巨幕与导航的间隔*/
+.jumbotron{
+    /*
+    margin-top: -20px;
+    */
+}
+/*控制栅格系统中图片的大小*/
+.caption img{
+    height: 50%;
+    width: 60%;
+    background-repeat: no-repeat;
+}

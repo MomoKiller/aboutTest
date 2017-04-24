@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <!--  确保适当的绘制和触屏缩放  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="icon" href="">
+    <title>集团客户实时监控</title>
+    <style>
+        body{
+            overflow: hidden;
+            margin: 0px;
+        }
+        .container-fluid{
+            background-color: #285e8e;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .northPanel{
+            background-color: #2aabd2;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .southPanel{
+            background-color: #2aabd2;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .northPanel .row h4{
+            color: #ebebeb;
+            text-align: center;
+            font-weight: bold;
+        }
+        .northPanel .h4contaner{
+            margin-top: 5px;
+        }
+        /*定义北部panel中的panel样式*/
+        .northPanel .row .panel{
+            margin-top: 10px;
+            background-color: #009900;
+        }
+        /*定义南部panel中的panel样式*/
+        .southPanel .row .panel{
+            margin-top: 10px;
+            background-color: #009900;
+        }
+        /*定义图片居中不重复*/
+        .panel img{
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="northPanel container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h4contaner">
+                        <h4><span>集团客户实时监控</span></h4>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="panel">
+                        <img src="images/blue/lan1.png" alt="...">
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="panel">
+                        <img src="images/blue/lan2.jpg" alt="...">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel">
+                        <img src="images/blue/lan3.jpg" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <diV class="southPanel container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel">
+                        <img src="images/blue/lan4.jpg" alt="...">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="panel">
+                        <img src="images/blue/lan5.jpg" alt="...">
+                    </div>
+                </div>
+            </div>
+        </diV>
+    </div>
+
+
+<!--  添加对应的bootstrap在后面，保证页面先加载完成  -->
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="dist/css/bootstrap-theme.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="jquery/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="dist/js/bootstrap.min.js"></script>
+<!--  引用自定义js  -->
+<script src="test1Resources/js/homePage1.js"></script>
+</body>
+</html>
