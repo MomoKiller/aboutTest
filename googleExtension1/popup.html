@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>googleExtension1</title>
+    <style>
+        form{border:1px solid #3a87ad;width: 300px;padding: 50px;}
+        form table tr td{height: 30px;}
+        .width100{width: 100%;}
+        .width200px{width: 200px;}
+    </style>
+</head>
+<body>
+    <form>
+        <table class="width100">
+            <thead>抢购努比亚</thead>
+            <tr>
+                <td>
+                    <label>请选择机型</label>
+                </td>
+                <td>
+                    <div id="clock_div"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select class="width200px">
+                        <option value="努比亚">努比亚</option>
+                        <option value="小米SIX">小米SIX</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label>抢购数量</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select class="width200px">
+                        <option value="1">1台</option>
+                        <option value="2">2台</option>
+                        <option value="3">3台</option>
+                        <option value="4">4台</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="beginShapping();">开始抢购</button></td>
+                <td><button onclick="closeShapping();">关闭抢购</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script src="js/default.js"></script>
+</html>

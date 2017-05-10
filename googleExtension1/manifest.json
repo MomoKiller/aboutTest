@@ -1,0 +1,11 @@
+{
+  "name": "googleExtension1",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "write my first googleExtension",
+  "browser_action": {
+    "default_icon": "icon.png" ,
+    "default_title": "first googleExtension",
+    "default_popup": "popup.html"
+  }
+}
