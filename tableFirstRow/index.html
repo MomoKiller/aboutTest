@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生方法写一个表头固定的表格</title>
+    <script src="resources/jquery.min.js"></script>
+    <style type="text/css">
+        #scroll_head {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="data_div">
+    <table>
+        <thead>
+        <tr>
+            <th class="tt1" colspan="2">一级1</th>
+            <th class="tt2" colspan="5">一级2</th>
+            <th class="tt3" colspan="6">一级3</th>
+        </tr>
+        <tr>
+            <th style="width: 23px;">二级11</th>
+            <th style="width: 36px;">二级12</th>
+            <th class="tt" style="width: 40px;">二级21</th>
+            <th class="tt" style="width: 30px;">二级22</th>
+            <th class="tt" style="width: 30px;">二级23</th>
+            <th class="tt" style="width: 30px;">二级23</th>
+            <th class="tt" style="width: 30px;">二级24</th>
+            <th class="tt" style="width: 30px;">二级25</th>
+            <th class="tt" style="width: 30px;">二级31</th>
+            <th class="tt" style="width: 30px;">二级32</th>
+            <th class="tt" style="width: 30px;">二级33</th>
+            <th class="tt" style="width: 30px;">二级33</th>
+            <th class="tt" style="width: 30px;">二级34</th>
+            <th class="tt" style="width: 30px;">二级35</th>
+            <th class="tt" style="width: 30px;">二级36</th>
+        </tr>
+        </thead>
+        <tbody id="data_tbody">
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        <tr>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+            <td>测试数据</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="scroll_head" style="display:block; top: 168px; left: 0px; position: relative;">
+    <table width="100%">
+        <thead>
+        <tr>
+            <th class="tt1" colspan="2">一级1</th>
+            <th class="tt2" colspan="5">一级2</th>
+            <th class="tt3" colspan="6">一级3</th>
+        </tr>
+        <tr>
+            <th style="width: 23px;">二级11</th>
+            <th style="width: 36px;">二级12</th>
+            <th class="tt" style="width: 40px;">二级21</th>
+            <th class="tt" style="width: 30px;">二级22</th>
+            <th class="tt" style="width: 30px;">二级23</th>
+            <th class="tt" style="width: 30px;">二级23</th>
+            <th class="tt" style="width: 30px;">二级24</th>
+            <th class="tt" style="width: 30px;">二级25</th>
+            <th class="tt" style="width: 30px;">二级31</th>
+            <th class="tt" style="width: 30px;">二级32</th>
+            <th class="tt" style="width: 30px;">二级33</th>
+            <th class="tt" style="width: 30px;">二级33</th>
+            <th class="tt" style="width: 30px;">二级34</th>
+            <th class="tt" style="width: 30px;">二级35</th>
+            <th class="tt" style="width: 30px;">二级36</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script type="text/javascript">
+
+    //该函数在上面一个table数据加载完成后调用
+    //把表头的宽度设置到会滚动的页头去
+    var copyWidth = function () {
+        var b = $('#data_tbody').prev().find('tr:last').find('th');
+        var c = $('#scroll_head').find('tr:last').find('th');
+        for (var i = 0; i < b.length; i++) {
+            var newWith = b.eq(i).width();
+            if ($.browser.msie) {
+                newWith += 1;
+            }
+            c.eq(i).width(newWith);
+        }
+    }
+
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($('#data_tbody').length > 0) {
+                var thead = $('#data_tbody').prev();
+                var thOffset = thead.offset();
+                var scTop = $(window).scrollTop();  //滚动条相对top的位置
+                if (scTop > thOffset.top) {   //滚动条滚到thead及以下的位置，用临时的thead代替显示
+                    $('#scroll_head').css('display', 'block');
+                    $('#scroll_head').offset({ top: scTop, left: thOffset.left });
+                }
+                else {  //滚动条滚到thead上的位置，用table的原始thead显示
+                    $('#scroll_head').css('display', 'none');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
