@@ -15,6 +15,7 @@
     <script src="resources/html5shiv.js"></script>
     <script src="resources/respond.min.js"></script>
     <![endif]-->
+    <script src="jquery/jquery.min.js"></script>
     <title>Bootstrap 网站练习</title>
     <style>
         /*定义全局*/
@@ -44,12 +45,13 @@
         div.picCenter{
             text-align: center;
             margin-top: -30px;
-            height: 50px;
+            height: 60px;
         }
         div.picCenter img{
             margin-top: -20px;
         }
-        div.picCenter:hover{
+        div.picCenter img:hover{
+            cursor: pointer;
             //用js控制
         }
         /*表格*/
@@ -136,10 +138,10 @@
 
     <div class="panel panel-default picCenter">
         <div class="panel-body">
-            <img src="resources/images/bootTest/chuliNO.png" alt="...">
-            <img src="resources/images/bootTest/guidangNO.png" alt="...">
-            <img src="resources/images/bootTest/paifaNO.png" alt="...">
-            <img src="resources/images/bootTest/zhijianNO.png" alt="...">
+            <img src="resources/images/bootTest/chuliNO.png" alt="..." id="chuli">
+            <img src="resources/images/bootTest/guidangNO.png" alt="..." id="guidang">
+            <img src="resources/images/bootTest/paifaNO.png" alt="..." id="paifa">
+            <img src="resources/images/bootTest/zhijianNO.png" alt="..." id="zhijian">
         </div>
     </div>
 
@@ -278,4 +280,5 @@
 
 
 </body>
+<script src="resources/js/bootTest.js"></script>
 </html>
