@@ -96,6 +96,27 @@
         div.copy-right a{
             color: #ffffff;
         }
+        /*返回顶部*/
+        #to_top{
+            width:40px;
+            height:40px;
+            padding:12px;
+            /*font:14px/20px arial;*/
+            /*text-align:center;*/
+            background:#27ae60;
+            position:absolute;
+            cursor:pointer;
+            color:#fff;
+            /*透明度*/
+            opacity:0.8;
+            filter:alpha(opacity=80); /* For IE8 and earlier */
+            border-radius: 2px;
+        }
+        #to_top:hover{
+            /*透明度*/
+            opacity:1.0;
+            filter:alpha(opacity=100); /* For IE8 and earlier */
+        }
     </style>
 </head>
 <body>
@@ -158,21 +179,8 @@
         </div>
 
         <!--  表格  -->
-        <table class="table table-hover">
-           <tr>
-               <td class="col-md-3">bootstrap</td>
-               <td>
-                   <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
-                   <p><span class="glyphicon glyphicon-star">110244</span></p>
-               </td>
-           </tr>
-            <tr>
-                <td>react</td>
-                <td>
-                    <p>React is a JavaScript library for builbing user interface</p>
-                    <p><span class="glyphicon glyphicon-star">66086</span></p>
-                </td>
-            </tr>
+        <table class="table table-hover" id="tableCenter">
+            <!--  表格内容我要动态的！
             <tr>
                 <td class="col-md-3">bootstrap</td>
                 <td>
@@ -230,6 +238,21 @@
                 </td>
             </tr>
             <tr>
+                <td class="col-md-3">bootstrap</td>
+                <td>
+                    <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                    <p><span class="glyphicon glyphicon-star">110244</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            -->
+            <tr id="tableBeforHtml">
                 <td colspan="2" class="text-center"><label>所有开源项目列表</label></td>
             </tr>
         </table>
@@ -278,7 +301,8 @@
         </div>
     </footer>
 
-
+    <!--  返回顶部  -->
+    <div id="to_top" class="glyphicon glyphicon-chevron-up"></div>
 </body>
 <script src="resources/js/bootTest.js"></script>
 </html>
