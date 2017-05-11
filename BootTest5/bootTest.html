@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  添加css样式  -->
+    <link href="resources/css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/html5shiv.js"></script>
+    <script src="resources/respond.min.js"></script>
+    <![endif]-->
+    <title>Bootstrap 网站练习</title>
+    <style>
+        /*定义全局*/
+        body{
+            font-family: "Helvetica Neue",Helvetica,"Lucida Grande",Arial,"Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+        }
+        div.jumbotron{
+            background-color: #27ae60;
+            text-align: center;
+            color: #ffffff;
+        }
+        div.jumbotron .navbar,div.jumbotron .navbar li a:hover{
+            background-color: #27ae60;
+        }
+        div.jumbotron .navbar li a{
+            color: #eee;
+        }
+        div.jumbotron .navbar li a:hover,div.jumbotron .navbar-header a{
+            color: #ffffff;
+        }
+        div.jumbotron h1{
+            text-shadow: -5px 5px 0 rgba(0,0,0,.1);
+        }
+        div.jumbotron input,div.jumbotron button{
+            height: 50px;
+        }
+        div.picCenter{
+            text-align: center;
+            margin-top: -30px;
+            height: 50px;
+        }
+        div.picCenter img{
+            margin-top: -20px;
+        }
+        div.picCenter:hover{
+            //用js控制
+        }
+        /*表格*/
+        .container table{
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 80px;
+        }
+        .container table tr td {
+            height: 80px;
+            padding: 15px;
+        }
+        .container table tr td:nth-child(1) {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .container table tr td:nth-child(2){
+            color: #737373;
+        }
+        .container table tr:last-child{
+            color: #27ae60;
+        }
+        /*footer*/
+        footer{
+            background-color: #27ae60;
+            color: #ffffff;
+        }
+        footer p a,footer a{
+            color: #ffffff;
+            text-decoration:dotted;
+        }
+        footer p a:hover,footer a:hover{
+            color: #ffffff;
+        }
+        div.copy-right{
+            background-color: rgba(51,51,51,.08);
+            color: #ffffff;
+            text-align: center;
+            height: 60px;
+            padding-top: 20px;
+        }
+        div.copy-right a{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!--  完美的跳过了 布局  -->
+
+    <!--  巨幕  -->
+    <div class="jumbotron">
+        <div class="container">
+            <!--  固定在顶部的导航条  -->
+            <nav class="navbar  navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">博客</a></li>
+                            <li><a href="#">关于</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--  文字信息  -->
+            <h1>BootCDN</h1>
+            <p>稳定、快速、免费的前端开源项目CDN加速服务</p>
+            <p><small>共收录 3000 个前端开源项目</small></p>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索开源库，例如：Jquery">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default picCenter">
+        <div class="panel-body">
+            <img src="resources/images/bootTest/chuliNO.png" alt="...">
+            <img src="resources/images/bootTest/guidangNO.png" alt="...">
+            <img src="resources/images/bootTest/paifaNO.png" alt="...">
+            <img src="resources/images/bootTest/zhijianNO.png" alt="...">
+        </div>
+    </div>
+
+    <div class="container">
+        <!--  按钮  -->
+        <div class="pull-right">
+            <label for="btnRight">选择协议：</label>
+            <div class="btn-group" role="group" aria-label="..." id="btnRight">
+                <button type="button" class="btn btn-default">https</button>
+                <button type="button" class="btn btn-default">http</button>
+                <button type="button" class="btn btn-success active">自适应</button>
+            </div>
+            <a href="#">了解详情<span class="glyphicon glyphicon-info-sign"></span></a>
+        </div>
+
+        <!--  表格  -->
+        <table class="table table-hover">
+           <tr>
+               <td class="col-md-3">bootstrap</td>
+               <td>
+                   <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                   <p><span class="glyphicon glyphicon-star">110244</span></p>
+               </td>
+           </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-3">bootstrap</td>
+                <td>
+                    <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                    <p><span class="glyphicon glyphicon-star">110244</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-3">bootstrap</td>
+                <td>
+                    <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                    <p><span class="glyphicon glyphicon-star">110244</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-3">bootstrap</td>
+                <td>
+                    <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                    <p><span class="glyphicon glyphicon-star">110244</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-3">bootstrap</td>
+                <td>
+                    <p>The most popular front-end framework for developing responsive,mobile first project on the web</p>
+                    <p><span class="glyphicon glyphicon-star">110244</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>react</td>
+                <td>
+                    <p>React is a JavaScript library for builbing user interface</p>
+                    <p><span class="glyphicon glyphicon-star">66086</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center"><label>所有开源项目列表</label></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer class="footer hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>关于 BootCDN</h4>
+                    <p>
+                        BootCDN 是 <a href="http://www.bootcss.com/" target="_blank">Bootstrap 中文网</a>和<a href="#" target="_blank">又拍云</a>共同支持并维护的前端开源项目免费 CDN 服务，由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular 一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+                    </p>
+                    <p>
+                        自2013年10月31日上线以来已经为上万家网站提供了稳定、可靠的免费 CDN 加速服务。
+                    </p>
+                    <p>
+                        反馈或建议请发送邮件至：cdn@bootcss.com
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>友情链接</h4>
+                    <a>Bootstrap 中文网</a><br>
+                    <a>Ghost 中国</a><br>
+                    <a>Laravel 中文网</a><br>
+                    <a>jQuery 中文 API</a><br>
+                    <a>Packagist 中国镜像</a><br>
+                    <a>Composer 中文网</a><br>
+                </div>
+                <div class="col-md-2">
+                    <h4>我们用到的技术</h4>
+                    <a>Bootstrap</a>  <a>Ghost</a><br>
+                    <a>jQuery</a>  <a>Babeljs</a><br>
+                    <a>Lodash</a>  <a>Node</a>  <a>Grunt</a><br>
+                    <a>Gulp</a>  <a>NPM</a>  <a>webpack</a><br>
+                </div>
+                <div class="col-md-3">
+                    <h4>战略合作 & CDN 提供</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="copy-right">
+            <span>© 2013-2017</span>
+            <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a> <span>京公网安备11010802014853</span>
+        </div>
+    </footer>
+
+
+</body>
+</html>
